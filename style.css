@@ -1,0 +1,120 @@
+.container {
+  width: 600px;
+  /*background: green;*/
+  /*középre a margók auto-ra állitásával*/
+  margin-left: auto;
+  margin-right: auto;
+  /*betütipus mindenre*/
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  color: gray;
+}
+
+h3 {
+  /*by default every h3 element rendelkezik egy top-margin-nal*/
+  color: black;
+  margin-top: 0px;
+}
+/*a specifikusabb cimzés mindig felülírja a többit, lásd itt a h3 felülírása! KÉT elem nem viselheti ugyanazt az ID-t! ID is more specific than class. A legtöbbször a class jó, mert nem tudod hány elem fogja ezt a tulajdonságot viselni.*/
+#second {
+  color: green;
+  font-size: 80%;
+}
+
+#terms {
+  /*a relativ poziciot a "base position-tól" számoljuk*/
+  position: relative;
+  top: 2px;
+  left: 0px;
+
+  /*elvesszük a "természetes flow-ból az elemet", vagy a PARENT elem-éhez pozicionáljuk, vagy, ha nincs PARENT element megadva, az egész oldalhoz
+ position: absolute;
+  top:0px;
+  left:0px;*/
+}
+
+.newsletter-form #email {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border-color: solid thin #cfcfcf;
+  /*ez ad egy kis eltartást a belegépelt szövegnek a szélétől*/
+  padding-left: 5px;
+  /*lekerekités*/
+  border-radius: 3px;
+  /*a box modell számolásának emgváltoztatása, hogy egyforma legyen a gombbal, mivel annak nincs bordere, stb*/
+  box-sizing: border-box;
+}
+
+.newsletter-form {
+  color: gray;
+  border: solid thin #cfcfcf;
+  padding: 10px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.newsletter-form button {
+  display: block;
+  width: 100%;
+  background-color: #3cb878;
+  border: none;
+  /*a default betűszín mindn gombnál a fekete*/
+  color: white;
+  height: 30px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.closing-x {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+}
+
+#question-circle {
+  height: 100px;
+  width: 100px;
+  background: #3cb878;
+  color: white;
+  font-size: 400%;
+  text-align: center;
+  border-radius: 50%;
+  /*fixed = mindig ott van*/
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+
+#question-circle a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card {
+  width: 180px;
+  background-color: #3cb878;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: white;
+  margin-bottom: 30px;
+  /*árnyék bottom-right-blur -distance-color*/
+  box-shadow: 0px 0px 3px 2px gray;
+  /*flexbox megoldás a képek egymás mellé helyezésére, ha körbevesszük a "flexelni" kivánot dobozokat egy parent elemmel ami ... display: flex ...képességet kap*/
+
+}
+  /*flexbox megoldás a képek egymás mellé helyezésére*/
+.card-holder {
+  display: flex;
+ /*flex-start az elejére rakja, flex-end a végére*/
+  justify-content: space-between;
+}
+
+.card h3 {
+  color: white;
+}
